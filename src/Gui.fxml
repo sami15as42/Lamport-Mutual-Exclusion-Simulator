@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="861.0" style="-fx-background-color: #a2b9ff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController">
+   <children>
+      <Text layoutX="22.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TP SYSR : Simulation de l'algorithme de Lamport" wrappingWidth="401.75439453125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <Button fx:id="startButton" layoutX="22.0" layoutY="47.0" mnemonicParsing="false" onAction="#startButton" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #1E90FF;" text="Start">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <ButtonBar layoutX="3.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0" />
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="22.0" layoutY="90.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff; -fx-border-color: #B0C4DE;">
+               <children>
+                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#log1" prefHeight="23.0" prefWidth="92.0" style="-fx-background-color: #E8E8E8; -fx-border-color: #C0C0C0;" text="File P1-Log" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab1" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus1" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="189.0" layoutY="90.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff;">
+               <children>
+                  <Button fx:id="btn2" mnemonicParsing="false" onAction="#log2" prefHeight="23.0" prefWidth="92.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P2-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab2" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus2" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="356.0" layoutY="90.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff;">
+               <children>
+                  <Button fx:id="btn3" mnemonicParsing="false" onAction="#log3" prefHeight="23.0" prefWidth="92.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P3-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab3" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus3" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="524.0" layoutY="90.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff;">
+               <children>
+                  <Button fx:id="btn4" mnemonicParsing="false" onAction="#log4" prefHeight="23.0" prefWidth="92.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P4-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab4" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus4" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="691.0" layoutY="90.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff;">
+               <children>
+                  <Button fx:id="btn5" mnemonicParsing="false" onAction="#log5" prefHeight="23.0" prefWidth="92.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P5-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab5" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus5" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="22.0" layoutY="354.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff;">
+               <children>
+                  <Button fx:id="btn6" layoutX="1.0" mnemonicParsing="false" onAction="#log6" prefHeight="23.0" prefWidth="92.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P6-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab6" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus6" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="189.0" layoutY="354.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff;">
+               <children>
+                  <Button fx:id="btn7" mnemonicParsing="false" onAction="#log7" prefHeight="23.0" prefWidth="92.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P7-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab7" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus7" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="356.0" layoutY="354.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff#a2b9ff;">
+               <children>
+                  <Button fx:id="btn8" mnemonicParsing="false" onAction="#log8" prefHeight="23.0" prefWidth="92.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P8-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab8" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus8" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="524.0" layoutY="354.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff;">
+               <children>
+                  <Button fx:id="btn9" mnemonicParsing="false" onAction="#log9" prefHeight="23.0" prefWidth="92.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P9-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab9" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus9" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.10699588477366255" layoutX="691.0" layoutY="354.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="150.0" style="-fx-border-color: #a2b9ff;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a2b9ff;">
+               <children>
+                  <Button fx:id="btn10" mnemonicParsing="false" onAction="#log10" prefHeight="26.0" prefWidth="100.0" style="-fx-border-color: #C0C0C0; -fx-background-color: #E8E8E8;" text="File P10-Log" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tab10" prefHeight="214.0" prefWidth="148.0" style="-fx-background-color: #B0C4DE;">
+                     <columns>
+                        <TableColumn prefWidth="41.0" text="Type" />
+                        <TableColumn prefWidth="67.0" text="Horloge" />
+                        <TableColumn prefWidth="41.0" text="Site" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="processus10" prefHeight="214.0" prefWidth="148.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <TextArea layoutX="525.0" layoutY="14.0" prefHeight="57.0" prefWidth="316.0" style="-fx-background-color: #E8E8E8;" text="ASSENINE Mohamed Sami &#10;AOUADJ Iheb Nassim&#10;SIQ3" />
+   </children>
+</AnchorPane>
